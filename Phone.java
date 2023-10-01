@@ -19,7 +19,6 @@ public class Phone {
         this("xxx", "xxx", 0);
     }
 
-
     void printInfo() {
         System.out.printf("Number: %s \tModel: %s \tWeight: %d\n", number, model, weight);
     }
