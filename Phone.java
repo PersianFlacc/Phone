@@ -1,33 +1,31 @@
-public class Phone {
+public abstract class Phone {
 
-    String number;
-    String model;
-    int weight;
-
-    public Phone(String name, String model, int weight) {
-        this.number = name;
-        this.model = model;
-        this.weight = weight;
-    }
-
-    public Phone(String n, String m) {
-        this.number = n;
-        this.model = m;
-    }
+    public String number;
+    public String model;
+    public int weight;
 
     public Phone() {
         this("xxx", "xxx", 0);
     }
 
-    void printInfo() {
-        System.out.printf("Number: %s \tModel: %s \tWeight: %d\n", number, model, weight);
+    public Phone(String number, String model, int weight) {
+        this.number = number;
+        this.model = model;
+        this.weight = weight;
     }
 
-    void receiveCall(String name) {
+    public Phone(String number, String model) {
+        this.number = number;
+        this.model = model;
+    }
+
+    public void receiveCall(String name) {
         System.out.println("Звонит " + name);
     }
 
     public String getNumber() {
         return number;
     }
+
+    public abstract void info();
 }

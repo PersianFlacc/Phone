@@ -2,30 +2,22 @@ public class Main {
 
     public static void main (String [] args){
 
-        Phone phone1 = new Phone("79157777777", "Iphone 15 Pro Max", 221);
-        Phone phone2 = new Phone("79158888888", "Galaxy S23 Ultra");
-        Phone phone3 = new Phone();
-
-        System.out.println(phone1.getNumber());
-        System.out.println(phone1.model);
-        System.out.println(phone1.weight);
-
         System.out.println("--------------------------");
 
-        System.out.println(phone2.getNumber());
-        System.out.println(phone2.model);
-        System.out.println(phone2.weight);
-
-        System.out.println("--------------------------");
-
-        System.out.println(phone3.getNumber());
-        System.out.println(phone3.model);
-        System.out.println(phone3.weight);
-
-        System.out.println("--------------------------");
-
+        SamsungPhone phone1 = new SamsungPhone("111", "S10", 260);
+        phone1.info();
         phone1.receiveCall("Мама");
+
+        System.out.println("--------------------------");
+
+        XiaomiPhone phone2 = new XiaomiPhone("222", "Redmi123");
+        phone2.info();
         phone2.receiveCall("Папа");
+
+        System.out.println("--------------------------");
+
+        ApplePhone phone3 = new ApplePhone();
+        phone3.info();
         phone3.receiveCall("Сестра");
     }
 }
