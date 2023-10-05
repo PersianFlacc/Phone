@@ -13,6 +13,14 @@ public class ApplePhone extends Phone{
     }
 
     @Override
+    public void receiveCall() {}
+
+    @Override
+    public void receiveCall(String name) {
+        System.out.println("Звонит: " + name);
+    }
+
+    @Override
     public void info() {
         System.out.printf("Number: %s \tModel: %s \tWeight: %d\n", this.getNumber(), this.model, this.weight);
     }

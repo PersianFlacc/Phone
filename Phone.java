@@ -1,4 +1,4 @@
-public abstract class Phone {
+public abstract class Phone implements Callable, Informable{
 
     public String number;
     public String model;
@@ -19,13 +19,13 @@ public abstract class Phone {
         this.model = model;
     }
 
-    public void receiveCall(String name) {
-        System.out.println("Звонит " + name);
-    }
-
     public String getNumber() {
         return number;
     }
+
+    public abstract void receiveCall();
+
+    public abstract void receiveCall(String name);
 
     public abstract void info();
 }
