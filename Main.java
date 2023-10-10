@@ -19,5 +19,22 @@ public class Main {
         ApplePhone phone3 = new ApplePhone();
         phone3.info();
         phone3.receiveCall("Сестра");
+
+        System.out.println("--------------------------");
+
+        SamsungPhone Phone = new SamsungPhone("56789", "S99", 100);
+
+        try {
+            Phone[] phoneArray = new Phone[10];
+            for (int i = 0; i < phoneArray.length; i++) {
+                phoneArray[i] = Phone.clone();
+            }
+
+            for (Phone phone : phoneArray) {
+                System.out.println(phone);
+            }
+        } catch (CloneNotSupportedException exception) {
+            System.out.println("Clonable not supported!");
+        }
     }
 }

@@ -24,4 +24,9 @@ public class SamsungPhone extends Phone{
     public void info() {
         System.out.printf("Number: %s \tModel: %s \tWeight: %d\n", this.getNumber(), this.model, this.weight);
     }
+
+    @Override
+    public SamsungPhone clone() throws CloneNotSupportedException {
+        return (SamsungPhone) super.clone();
+    }
 }

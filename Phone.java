@@ -1,4 +1,4 @@
-public abstract class Phone implements Callable, Informable{
+public abstract class Phone implements Callable, Informable, Cloneable{
 
     public String number;
     public String model;

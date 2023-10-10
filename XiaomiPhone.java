@@ -25,6 +25,9 @@ class XiaomiPhone extends Phone {
         System.out.printf("Number: %s \tModel: %s \tWeight: %d\n", this.getNumber(), this.model, this.weight);
     }
 
-
+    @Override
+    public XiaomiPhone clone() throws CloneNotSupportedException {
+        return (XiaomiPhone) super.clone();
+    }
 }
 

@@ -24,4 +24,9 @@ public class ApplePhone extends Phone{
     public void info() {
         System.out.printf("Number: %s \tModel: %s \tWeight: %d\n", this.getNumber(), this.model, this.weight);
     }
+
+    @Override
+    public ApplePhone clone() throws CloneNotSupportedException {
+        return (ApplePhone) super.clone();
+    }
 }
